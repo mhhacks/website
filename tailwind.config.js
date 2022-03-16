@@ -9,6 +9,11 @@ module.exports = {
         },
         text: {
           DEFAULT: '#000',
+        },
+        co: {
+          red: '#BF2C34',
+          blue: '#102E82',
+          yellow: '#F6D047'
         }
       },
       fontFamily: {

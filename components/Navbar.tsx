@@ -10,7 +10,7 @@ const navItems = {
   Sponsors: '/#sponsors',
   Team: '/#team',
   FAQ: '/#faq',
-  Register: '/register'
+  Register: '/register',
 }
 
 const Navbar: React.FC<{}> = ({}) => {
@@ -50,9 +50,9 @@ const Navbar: React.FC<{}> = ({}) => {
   return (
     <div
       className={clsx(
-        'fixed top-0 w-full z-40 transition-all bg-opacity-90 border-gray-800',
-        !isAtTop && 'border-b bg-bg',
-        isAtTop && menuOpen && 'bg-bg sm:bg-transparent'
+        'fixed top-0 w-full z-40 transition-all border-gray-800',
+        !isAtTop && 'border-b bg-white',
+        isAtTop && menuOpen && 'bg-white sm:bg-transparent'
       )}
     >
       {/* <div className='p-1 text-center bg-accent-red font-bold'>MAHacks has been postponed from March 19 to April 10. Please check your email for more details.</div> */}
@@ -60,7 +60,7 @@ const Navbar: React.FC<{}> = ({}) => {
       <div
         className={clsx(
           'flex flex-col sm:flex-row sm:items-center gap-3 md:gap-7 max-w-6xl mx-auto px-8 transition-all',
-          isAtTop ? 'py-6' : 'py-3'
+          isAtTop ? 'py-4' : 'py-2'
         )}
       >
         <div className="flex items-center">
@@ -105,7 +105,12 @@ const Navbar: React.FC<{}> = ({}) => {
                   }}
                 >
                   <Link href={href}>
-                    <a className={clsx("font-semibold hover:drop-shadow-xl transition-all", isAtTop && 'text-white')}>
+                    <a
+                      className={clsx(
+                        'font-semibold hover:drop-shadow-xl transition-all',
+                        isAtTop && 'text-white'
+                      )}
+                    >
                       {name}
                     </a>
                   </Link>

@@ -24,7 +24,7 @@
 	animation-duration: var(--time-anim);
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.20);
 }
 
 .img {

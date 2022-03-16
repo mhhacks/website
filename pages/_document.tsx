@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 const googleFontFamilies: string[] = [
-  'Barlow:wght@400;500;600;700',
+  'Barlow:wght@300;400;500;600;700',
   'Changa:wght@400;600;700',
 ]
 

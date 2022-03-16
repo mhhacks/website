@@ -5,6 +5,7 @@ import Team from 'components/Sections/Team'
 import Meta from 'components/Meta'
 import Sponsors from 'components/Sections/Sponsors'
 import HomeLayout from 'components/HomeLayout'
+import InfoGrid from 'components/InfoGrid'
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +13,20 @@ const Home: NextPage = () => {
       {/* <Meta /> */}
 
       <div>
-        <div className="h-screen flex items-center justify-center text-xl font-medium">
-          Mile High Hacks: coming to Denver, CO this fall
+        <div id="how-it-works" className="mb-20">
+          <Heading>What&apos;s this?</Heading>
+          <p className="text-lg leading-relaxed font-light">
+            <strong className="font-semibold">Mile High Hacks</strong> is an
+            event (called a <strong className="font-semibold">hackathon</strong>
+            ) that will bring over 100 high schoolers from Denver and the
+            surrounding regions together for 24 hours to design, invent, code,
+            and build apps and games. On Saturday, participants will get matched into a
+            team of four people - or bring a team of
+            friends! On the second day, our judges will select the winning
+            teams to demo their projects and win prizes! Mile High Hacks is designed for all skill levels, whether you&apos;ve never written code before or have been coding for years.
+          </p>
+
+          <InfoGrid />
         </div>
 
         {/* <div id="sponsors">
