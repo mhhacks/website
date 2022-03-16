@@ -1,19 +1,18 @@
 import type { NextPage } from 'next'
 import Heading from 'components/Heading'
-import { BsArrowRight } from 'react-icons/bs'
 import FAQ from 'components/Sections/FAQ.mdx'
 import Team from 'components/Sections/Team'
 import Meta from 'components/Meta'
 import Sponsors from 'components/Sections/Sponsors'
+import HomeLayout from 'components/HomeLayout'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <HomeLayout>
       {/* <Meta /> */}
 
       <div>
-
-        <div className='h-screen flex items-center justify-center text-xl font-medium'>
+        <div className="h-screen flex items-center justify-center text-xl font-medium">
           Mile High Hacks: coming to Denver, CO this fall
         </div>
 
@@ -59,7 +58,7 @@ const Home: NextPage = () => {
           <Team />
         </div> */}
       </div>
-    </div>
+    </HomeLayout>
   )
 }
 

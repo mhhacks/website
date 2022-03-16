@@ -6,11 +6,11 @@ import Icon from '@hackclub/icons'
 import Logo from './Logo'
 
 const navItems = {
-  'HOW IT WORKS': '/#how-it-works',
-  REGISTER: '/register',
+  'How It Works': '/#how-it-works',
+  Sponsors: '/#sponsors',
+  Team: '/#team',
   FAQ: '/#faq',
-  SPONSORS: '/#sponsors',
-  PREVIOUS: '/#previous',
+  Register: '/register'
 }
 
 const Navbar: React.FC<{}> = ({}) => {
@@ -105,7 +105,7 @@ const Navbar: React.FC<{}> = ({}) => {
                   }}
                 >
                   <Link href={href}>
-                    <a className="font-bold hover:drop-shadow-xl transition-all">
+                    <a className={clsx("font-semibold hover:drop-shadow-xl transition-all", isAtTop && 'text-white')}>
                       {name}
                     </a>
                   </Link>

@@ -12,7 +12,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        primary: ['"Josefin Sans"', 'sans-serif'],
+        primary: ['Barlow', 'sans-serif'],
+        heading: ['Changa', 'sans-serif'],
       },
       animation: {
       },

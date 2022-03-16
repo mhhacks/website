@@ -71,3 +71,5 @@ export interface ApplicationRecord {
 
 export const createApplication = (data: ApplicationFields) =>
   applications.create(data)
+
+export {}
