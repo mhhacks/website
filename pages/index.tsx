@@ -16,60 +16,54 @@ const Home: NextPage = () => {
         <div id="how-it-works" className="mb-20">
           <Heading>What&apos;s this?</Heading>
           <p className="text-lg leading-relaxed font-light">
-            <strong className="font-semibold">Mile High Hacks</strong> is an
-            event (called a <strong className="font-semibold">hackathon</strong>
-            ) that will bring over 100 high schoolers from Denver and the
+            <strong className="font-semibold">Mile High Hacks</strong> is a <strong className="font-semibold">hackathon</strong> that will bring over 100 high schoolers from Denver and the
             surrounding regions together for 24 hours to design, invent, code,
-            and build apps and games. On Saturday, participants will get matched into a
-            team of four people - or bring a team of
-            friends! On the second day, our judges will select the winning
-            teams to demo their projects and win prizes! Mile High Hacks is designed for all skill levels, whether you&apos;ve never written code before or have been coding for years.
+            and build apps and games. Mile High Hacks is designed for all skill
+            levels, whether you&apos;ve never written code before or have been
+            coding for years. On Saturday, participants will get matched
+            into a team of four people to build a project with - or bring a team of friends! On the
+            Sunday, our judges will select the winning teams to demo their
+            projects and earn prizes!
           </p>
 
           <InfoGrid />
         </div>
 
-        {/* <div id="sponsors">
-          <Heading>Sponsors</Heading>
-          <p className="text-gray-400 text-sm">
-            MAHacks is made possible by our awesome sponsors–
-            <a className="underline" href="/prospectus">
-              check out our prospectus
-            </a>
-            ! Want to work together?&nbsp;
+        <div id="sponsors">
+          <Heading>Brought to you by</Heading>
+          <p className="text-center text-xl font-light leading-snug">
+            Mile High Hacks is made possible by our awesome sponsors.
+            <br/>
             <a
-              className="font-semibold hover:underline inline-flex items-center"
+              className="underline opacity-50 hover:opacity-80"
               href="mailto:team@mahacks.com"
             >
-              Let&apos;s talk <BsArrowRight className="inline-block mx-1" />
+              Want to work together?
             </a>
           </p>
 
           <Sponsors />
-        </div> */}
+        </div>
 
-        {/* <div id="faq">
-          <Heading>FAQ</Heading>
-          <p className="text-gray-400 text-sm">
-            Have a question?{' '}
-            <a
-              className="font-semibold hover:underline inline-flex items-center"
-              href="mailto:team@mahacks.com"
-            >
-              Contact the team <BsArrowRight className="inline-block mx-1" />
-            </a>
+        <div className='py-24' id="faq"> <div className='bg-co-blue p-6 rounded-md text-white'>
+          <Heading className='pt-0 text-white'>FAQ?!?</Heading>
+          <p className="text-center text-lg">
+            Feel free to send us questions (or memes) at <a
+              className="underline"
+              href="mailto:team@milehighhacks.com"
+            >team@milehighhacks.com</a>
           </p>
 
           <div className="p-6 rounded-2xl bg-bg-card my-4 mdx">
             <FAQ />
           </div>
-        </div> */}
+        </div></div>
 
-        {/* <div id="team">
-          <Heading>Team</Heading>
+        <div id="team">
+          <Heading>Our team</Heading>
 
-          <Team />
-        </div> */}
+          {/* <Team /> */}
+        </div>
       </div>
     </HomeLayout>
   )

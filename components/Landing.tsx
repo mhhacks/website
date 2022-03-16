@@ -60,7 +60,7 @@ const Landing: React.FC = ({ children }) => {
 
         <Link href="/register">
           <a>
-            <Button className="text-2xl font-heading">Register Now</Button>
+            <Button className="text-3xl font-heading">Register Now</Button>
           </a>
         </Link>
 
