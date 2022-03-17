@@ -50,7 +50,7 @@ const Landing: React.FC = ({ children }) => {
 
         <p className="max-w-md text-2xl font-medium">
           High schoolers: learn to code with 24 hours of fun, free food,
-          workshops & prizes in Denver, CO.
+          workshops & prizes in <span className='location'>Denver, CO</span>.
         </p>
 
         <div className="rounded-md px-3 py-1 border-2 border-white font-bold leading-none backdrop-blur-sm">
@@ -67,6 +67,21 @@ const Landing: React.FC = ({ children }) => {
         <style jsx>{`
           .mhh-header {
             text-shadow: -4px 4px 0px rgba(255, 255, 255, 0.6);
+          }
+
+          .location {
+            position: relative;
+          }
+
+          .location::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+            height: 40%;
+            background: #BF2C34;
+            z-index: -1;
           }
         `}</style>
       </div>

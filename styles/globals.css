@@ -30,11 +30,19 @@
   }
 
   .mdx p {
-    @apply my-3;
+    @apply my-3 leading-relaxed;
   }
 
   .mdx a {
-    /* @apply hover:underline decoration-dotted text-primary; */
+    @apply underline hover:decoration-dashed;
+  }
+
+  .mdx details {
+    @apply m-2;
+  }
+
+  .mdx summary {
+    @apply text-lg font-semibold cursor-pointer;
   }
 
   .mdx ul {

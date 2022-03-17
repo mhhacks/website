@@ -9,7 +9,7 @@ const PageLayout: React.FC<{ mdx?: boolean }> = ({ children, mdx }) => {
       <AnalyticsScript />
       <Navbar />
 
-      <div className="max-w-5xl mx-auto px-6 my-20 min-h-screen">
+      <div className="max-w-3xl mx-auto px-6 my-20 min-h-screen">
         <div className={clsx(mdx && 'mdx')}>{children}</div>
       </div>
 

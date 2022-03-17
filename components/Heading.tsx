@@ -11,7 +11,7 @@ const Heading: React.FC<{
       className={clsx(
         'font-bold mb-8 text-center',
         small ? 'text-2xl pt-12' : 'text-[2.5rem] pt-20 text-co-blue',
-        className,
+        className
       )}
     >
       {children}

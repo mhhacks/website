@@ -13,7 +13,7 @@ const SocialButton = ({ glyph, href }: any) => (
 
 const FooterLink = ({ href, children }: any) => (
   <Link href={href}>
-    <a className="hover:text-primary underline decoration-dotted transition-all ">
+    <a className="underline font-medium transition-all">
       {children}
     </a>
   </Link>
@@ -21,7 +21,7 @@ const FooterLink = ({ href, children }: any) => (
 
 const Footer: React.FC = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-40">
       <div className="relative">
         <div className="divider">
           <svg
@@ -72,9 +72,8 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="bg-co-yellow text-sm">
-        <div className="p-14 flex flex-col sm:flex-row max-w-3xl mx-auto gap-6 justify-center">
-          <div>
-            <div className="flex flex-col gap-3">
+        <div className="p-14 flex flex-col sm:flex-row items-center max-w-3xl mx-auto gap-6 justify-center">
+            <div className="flex flex-row sm:flex-col gap-3">
               <SocialButton
                 href="https://www.instagram.com/ma_hacks/"
                 glyph="instagram"
@@ -84,18 +83,10 @@ const Footer: React.FC = () => {
                 glyph="twitter"
               />
               <SocialButton href="https://github.com/mahacks" glyph="github" />
-              <SocialButton href="mailto:team@mahacks.com" glyph="email" />
+              <SocialButton href="mailto:team@milehighhacks.com" glyph="email" />
             </div>
-          </div>
 
-          {/* <div className="flex-1 flex flex-col gap-3">
-            <div className="flex-1 flex flex-col gap-1">
-              <FooterLink href="/conduct">code of conduct</FooterLink>
-              <FooterLink href="https://v.mahacks.com/">old website</FooterLink>
-            </div>
-          </div> */}
-
-          <div>
+          <div className='flex flex-col gap-2'>
             <div>
               <a
                 target={'_blank'}
@@ -111,11 +102,11 @@ const Footer: React.FC = () => {
               </a>
             </div>
 
-            <div className='my-2'>
+            <div>
               <a
                 target={'_blank'}
                 rel="noreferrer"
-                href="https://bank.hackclub.com/mahacks/"
+                href="https://bank.hackclub.com/milehighhacks/"
               >
                 {/* eslint-disable @next/next/no-img-element */}
                 <img
@@ -126,7 +117,9 @@ const Footer: React.FC = () => {
               </a>
             </div>
 
-            <p className="font-semibold my-2">
+            <FooterLink href="/conduct">code of conduct</FooterLink>
+
+            <p className="font-semibold">
               Copyright {new Date().getFullYear()} Mile High Hacks.
             </p>
 

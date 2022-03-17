@@ -1,17 +1,17 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import Benjamin from 'photos/team/benjamin.png'
+import Benjamin from 'photos/team/benjamin2.png'
 import Kunal from 'photos/team/kunal.jpeg'
 
 const Person = ({ name, role, pronouns, image, link }: any) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex flex-col gap-1">
       <Image
         src={image}
         alt={name}
-        width={80}
-        height={80}
-        className="rounded-full"
+        width={240}
+        height={240}
+        className='rounded-sm'
         objectFit="cover"
         objectPosition={'center'}
       />
@@ -19,16 +19,17 @@ const Person = ({ name, role, pronouns, image, link }: any) => {
         <a href={link} target={'_blank'} rel="noreferrer">
           <h4
             className={clsx(
-              'font-bold text-lg border-b border-transparent border-dashed',
+              'm-0 font-primary font-bold text-lg border-b border-transparent border-dashed',
               link && 'hover:border-primary hover:text-primary'
             )}
           >
             {name}
-            {/* <span className="text-gray-500 font-light">({pronouns})</span> */}
+            {/* <span className="text-gray-500 font-light text-xs">{pronouns}</span> */}
           </h4>
         </a>
-        <p className="text-gray-600">
-          {role} &middot; {pronouns}
+        <p className="text-gray-600 text-xs">
+          {role}
+          {/* <br/>{pronouns} */}
         </p>
         {/* <a><Icon glyph='web' /></a> */}
       </div>
@@ -37,7 +38,7 @@ const Person = ({ name, role, pronouns, image, link }: any) => {
 }
 
 const Grid: React.FC = ({ children }) => (
-  <div className="grid gap-5 grid-cols-1 md:grid-cols-3 grid-flow-row">
+  <div className="grid gap-4 grid-cols-2 md:grid-cols-4 grid-flow-row">
     {children}
   </div>
 )
@@ -50,26 +51,25 @@ const Team: React.FC = () => {
           name="Benjamin Ashbaugh"
           role="Lead Organizer"
           pronouns="he/him"
-          image={Kunal}
-        />
-        <Person
-          name="Kunal Botla"
-          role="Sponsorship & Logistics"
-          pronouns="he/him"
           image={Benjamin}
-          // link='https://benjaminashbaugh.me'
         />
         <Person
           name="Sam Sterritt"
-          role="Stuff"
+          role="Outreach & Marketing"
           pronouns="she/her"
-          // image={}
+          image={Benjamin}
         />
         <Person
           name="JP Keranne"
-          role="Stuff"
-          pronouns="she/her"
-          // image={}
+          role="Outreach & Coordination"
+          pronouns="he/him"
+          image={Benjamin}
+        />
+        <Person
+          name="Kunal Botla"
+          role="Sponsorships & Logistics"
+          pronouns="he/him"
+          image={Kunal}
         />
         {/* <Person
           name="Sarthak Mohanty"

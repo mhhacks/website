@@ -4,6 +4,7 @@ import { useLayoutEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Icon from '@hackclub/icons'
 import Logo from './Logo'
+import { useRouter } from 'next/router'
 
 const navItems = {
   'How It Works': '/#how-it-works',
@@ -14,6 +15,7 @@ const navItems = {
 }
 
 const Navbar: React.FC<{}> = ({}) => {
+  const router = useRouter()
   const [isAtTop, setAtTop] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -50,7 +52,7 @@ const Navbar: React.FC<{}> = ({}) => {
   return (
     <div
       className={clsx(
-        'fixed top-0 w-full z-40 transition-all border-gray-800',
+        'fixed top-0 w-full z-40 transition-all border-slate-300',
         !isAtTop && 'border-b bg-white',
         isAtTop && menuOpen && 'bg-white sm:bg-transparent'
       )}
@@ -108,7 +110,7 @@ const Navbar: React.FC<{}> = ({}) => {
                     <a
                       className={clsx(
                         'font-semibold hover:drop-shadow-xl transition-all',
-                        isAtTop && 'text-white'
+                        isAtTop && router.pathname === '/' && 'text-white'
                       )}
                     >
                       {name}

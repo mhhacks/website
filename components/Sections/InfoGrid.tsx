@@ -8,7 +8,9 @@ const Card: React.FC<{ icon: React.ReactNode; title: string }> = ({
 }) => {
   return (
     <div className="p-4 shadow-lg rounded-md hover:shadow-xl transition-all group">
-      <div className='group-hover:-translate-y-1 group-hover:rotate-3 duration-200 transition-transform'>{icon}</div>
+      <div className="group-hover:-translate-y-1 group-hover:rotate-3 duration-200 transition-transform">
+        {icon}
+      </div>
       <h3 className="text-xl">{title}</h3>
       {children}
     </div>
@@ -20,9 +22,7 @@ const InfoGrid: React.FC = ({ children }) => {
     <div className="my-14">
       <div className="grid grid-cols-2 gap-4 auto-rows-fr">
         <Card
-          icon={
-            <HIcon glyph="explore" size={48} className="text-blue-400" />
-          }
+          icon={<HIcon glyph="explore" size={48} className="text-blue-400" />}
           title="Workshops and mentors"
         >
           We&apos;ll provide beginner-oriented workshops on coding basics, web
