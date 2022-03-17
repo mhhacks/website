@@ -75,14 +75,14 @@ const Footer: React.FC = () => {
         <div className="p-14 flex flex-col sm:flex-row items-center max-w-3xl mx-auto gap-6 justify-center">
             <div className="flex flex-row sm:flex-col gap-3">
               <SocialButton
-                href="https://www.instagram.com/ma_hacks/"
+                href="https://www.instagram.com/milehighhacks/"
                 glyph="instagram"
               />
               <SocialButton
-                href="https://twitter.com/ma_hacks"
+                href="https://twitter.com/milehighhacks"
                 glyph="twitter"
               />
-              <SocialButton href="https://github.com/mahacks" glyph="github" />
+              <SocialButton href="https://github.com/mhhacks" glyph="github" />
               <SocialButton href="mailto:team@milehighhacks.com" glyph="email" />
             </div>
 

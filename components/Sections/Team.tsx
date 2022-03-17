@@ -14,6 +14,7 @@ const Person = ({ name, role, pronouns, image, link }: any) => {
         className='rounded-sm'
         objectFit="cover"
         objectPosition={'center'}
+        placeholder='blur'
       />
       <div className="flex flex-col">
         <a href={link} target={'_blank'} rel="noreferrer">
