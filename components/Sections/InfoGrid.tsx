@@ -25,56 +25,56 @@ const InfoGrid: React.FC = ({ children }) => {
           icon={<HIcon glyph="explore" size={48} className="text-blue-400" />}
           title="Workshops and mentors"
         >
-          We&apos;ll provide beginner-oriented workshops on coding basics, web
+          {`We'll provide beginner-oriented workshops on coding basics, web
           development, design, and more, to help you learn to code. Mentors will
-          also be available to provide assistance when needed.
+          also be available to provide assistance when needed.`}
         </Card>
 
         <Card
           icon={<HIcon glyph="food" size={48} className="text-orange-400" />}
           title="Free meals"
         >
-          We&apos;ll provide meals, snacks and drinks for the duration of the
+          {`We'll provide meals, snacks and drinks for the duration of the
           hackathon, so that you can keep coding without worrying about food.
-          (Dietary restrictions? Don&apos;t worry, we&apos;ve got you covered!)
+          (Dietary restrictions? Don't worry, we've got you covered!)`}
         </Card>
 
         <Card
           icon={<HIcon glyph="emoji" size={48} className="text-purple-400" />}
           title="Fun & games"
         >
-          Mile High Hacks is about more than just coding - make new friends, eat
+          {`Mile High Hacks is about more than just coding - make new friends, eat
           ice cream at midnight, attend the 2am dance party, go on a scavenger
-          hunt, and more!
+          hunt, and more!`}
         </Card>
 
         <Card
           icon={<HIcon glyph="shirt" size={48} className="text-red-400" />}
           title="Prizes"
         >
-          Every participant will receive a free month of repl.it&apos;s hacker
+          {`Every participant will receive a free month of repl.it's hacker
           plan, a t-shirt, stickers, and more. Winners will walk away with
-          additional prizes, including DigitalOcean credits..
+          additional prizes, including DigitalOcean credits...`}
         </Card>
 
         <Card
           icon={<HIcon glyph="welcome" size={48} className="text-pink-400" />}
           title="By students, for students"
         >
-          Mile High Hacks is Colorado&apos;s very first hackathon independently
-          organized by high schoolers, for high schoolers. It&apos;s our goal to
+          {`Mile High Hacks is Colorado's very first hackathon independently
+          organized by high schoolers, for high schoolers. It's our goal to
           inspire creativity and innovation by introducing you to coding in a
-          super fun way.
+          super fun way.`}
         </Card>
 
         <Card
           icon={<HIcon glyph="like" size={48} className="text-green-400" />}
           title="Safety"
         >
-          Safety is a top priority at Mile High Hacks. We&apos;ll have adult
+          {`Safety is a top priority at Mile High Hacks. We'll have adult
           supervisors with background checks on site for the duration of the
-          event and will work with our venue&apos;s security to make sure that
-          everyone stays safe.
+          event and will work with our venue's security to make sure that
+          everyone stays safe.`}
         </Card>
       </div>
     </div>

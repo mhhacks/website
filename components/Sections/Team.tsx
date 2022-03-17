@@ -11,10 +11,10 @@ const Person = ({ name, role, pronouns, image, link }: any) => {
         alt={name}
         width={240}
         height={240}
-        className='rounded-sm'
+        className="rounded-sm"
         objectFit="cover"
         objectPosition={'center'}
-        placeholder='blur'
+        placeholder="blur"
       />
       <div className="flex flex-col">
         <a href={link} target={'_blank'} rel="noreferrer">

@@ -50,7 +50,7 @@ const Landing: React.FC = ({ children }) => {
 
         <p className="max-w-md text-2xl font-medium">
           High schoolers: learn to code with 24 hours of fun, free food,
-          workshops & prizes in <span className='location'>Denver, CO</span>.
+          workshops & prizes in <span className="location">Denver, CO</span>.
         </p>
 
         <div className="rounded-md px-3 py-1 border-2 border-white font-bold leading-none backdrop-blur-sm">
@@ -76,12 +76,20 @@ const Landing: React.FC = ({ children }) => {
           .location::after {
             position: absolute;
             content: '';
-            width: 100%;
+            //width: 100%;
             left: 0;
+            right: 0;
             bottom: -1px;
             height: 40%;
-            background: #BF2C34;
+            background: #bf2c34;
             z-index: -1;
+            transition: cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+          }
+
+          .location:hover::after {
+            height: 100%;
+            left: -1px;
+            right: -1px;
           }
         `}</style>
       </div>

@@ -48,6 +48,10 @@
   .mdx ul {
     @apply list-disc ml-7;
   }
+
+  p strong {
+    @apply font-semibold;
+  }
 }
 
 @layer utilities {

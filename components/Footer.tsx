@@ -13,9 +13,7 @@ const SocialButton = ({ glyph, href }: any) => (
 
 const FooterLink = ({ href, children }: any) => (
   <Link href={href}>
-    <a className="underline font-medium transition-all">
-      {children}
-    </a>
+    <a className="underline font-medium transition-all">{children}</a>
   </Link>
 )
 
@@ -73,20 +71,20 @@ const Footer: React.FC = () => {
 
       <div className="bg-co-yellow text-sm">
         <div className="p-14 flex flex-col sm:flex-row items-center max-w-3xl mx-auto gap-6 justify-center">
-            <div className="flex flex-row sm:flex-col gap-3">
-              <SocialButton
-                href="https://www.instagram.com/milehighhacks/"
-                glyph="instagram"
-              />
-              <SocialButton
-                href="https://twitter.com/milehighhacks"
-                glyph="twitter"
-              />
-              <SocialButton href="https://github.com/mhhacks" glyph="github" />
-              <SocialButton href="mailto:team@milehighhacks.com" glyph="email" />
-            </div>
+          <div className="flex flex-row sm:flex-col gap-3">
+            <SocialButton
+              href="https://www.instagram.com/milehighhacks/"
+              glyph="instagram"
+            />
+            <SocialButton
+              href="https://twitter.com/milehighhacks"
+              glyph="twitter"
+            />
+            <SocialButton href="https://github.com/mhhacks" glyph="github" />
+            <SocialButton href="mailto:team@milehighhacks.com" glyph="email" />
+          </div>
 
-          <div className='flex flex-col gap-2'>
+          <div className="flex flex-col gap-2">
             <div>
               <a
                 target={'_blank'}
