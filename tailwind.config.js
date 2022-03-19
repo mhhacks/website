@@ -21,8 +21,17 @@ module.exports = {
         heading: ['Changa', 'sans-serif'],
       },
       animation: {
+        pulsate: 'pulsate 5s ease-in-out infinite both',
       },
       keyframes: {
+        pulsate: {
+          'from, to': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(0.8)',
+          },
+        }
       },
       backgroundSize: {
         'oversize': '200% 200%'

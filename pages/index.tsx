@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Heading from 'components/Heading'
+import SectionHeading from 'components/SectionHeading'
 import FAQ from 'components/Sections/FAQ.mdx'
 import Details from 'components/Sections/Details.mdx'
 import Team from 'components/Sections/Team'
@@ -16,13 +16,13 @@ const Home: NextPage = () => {
 
       <div>
         <div id="how-it-works" className="mb-20">
-          <Heading>What&apos;s this?</Heading>
+          <SectionHeading>What&apos;s this?</SectionHeading>
           <Details />
           <InfoGrid />
         </div>
 
         <div id="sponsors">
-          <Heading>Brought to you by</Heading>
+          <SectionHeading>Brought to you by</SectionHeading>
           <p className="text-center text-xl font-light leading-snug">
             Mile High Hacks is made possible by our awesome sponsors.
             <br />
@@ -39,9 +39,9 @@ const Home: NextPage = () => {
 
         <div className="pt-24" id="faq">
           <div className="p-12 bg-co-blue rounded-md text-white">
-            <Heading className="!p-0 !m-0 leading-none !text-white">
+            <SectionHeading className="!p-0 !m-0 leading-none !text-white">
               FAQ?!?
-            </Heading>
+            </SectionHeading>
             <p className="my-6 text-center text-lg">
               Feel free to send questions (or memes) to{' '}
               <a className="underline" href="mailto:team@milehighhacks.com">
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
         </div>
 
         <div id="team">
-          <Heading>Our team</Heading>
+          <SectionHeading>Our team</SectionHeading>
 
           <Team />
         </div>

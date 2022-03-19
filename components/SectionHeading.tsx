@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-const Heading: React.FC<{
+const SectionHeading: React.FC<{
   className?: string
   as?: string
   small?: boolean
@@ -19,4 +19,4 @@ const Heading: React.FC<{
   )
 }
 
-export default Heading
+export default SectionHeading

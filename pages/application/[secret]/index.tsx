@@ -18,7 +18,7 @@ import { censorEmail } from 'lib/util'
 import Input from 'components/Forms/Input'
 import { useRouter } from 'next/router'
 import Meta from 'components/Meta'
-import Heading from 'components/Heading'
+import SectionHeading from 'components/SectionHeading'
 
 type ApplicationFormData = ApplicationFields & {}
 
