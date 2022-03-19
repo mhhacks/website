@@ -7,17 +7,6 @@ import clsx from 'clsx'
 import Button from './Button'
 import Link from 'next/link'
 
-// const image = <Image
-// layout="responsive"
-// src={DenverPhoto}
-// alt="Hackers work on their projects at MAHacks 2019"
-// priority
-// quality={30}
-// objectFit="cover"
-// objectPosition={'center'}
-// className={clsx('brightness-50', glitchStyles.img)}
-// />
-
 const bgImg = (
   <div
     className={clsx(
