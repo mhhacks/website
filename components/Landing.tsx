@@ -47,7 +47,7 @@ const Landing: React.FC = ({ children }) => {
           <div className="text-[3.1rem]">19-20</div>
         </div>
 
-        <Link href="/register">
+        <Link href="/preregister">
           <a>
             <Button dark className="text-3xl font-heading">Register Now</Button>
           </a>

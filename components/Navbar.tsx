@@ -11,7 +11,7 @@ const navItems = {
   Sponsors: '/#sponsors',
   Team: '/#team',
   FAQ: '/#faq',
-  Register: '/register',
+  Register: '/preregister',
 }
 
 const Navbar: React.FC<{}> = ({}) => {

@@ -4,14 +4,21 @@ const { APPLICATIONS_BASE_ID, AIRTABLE_KEY } = process.env
 
 const table = (tableName: string) =>
   new AirtablePlus({
-    baseID: process.env.APPLICATIONS_BASE_ID,
-    apiKey: process.env.AIRTABLE_KEY,
+    baseID: APPLICATIONS_BASE_ID,
+    apiKey: AIRTABLE_KEY,
     tableName,
   })
 
 const applications = table('Applications')
 const RVSPs = table('RVSPs')
 const emails = table('Emails')
+const interest = table('Interest')
+
+export const createInterest = (email: string) => {
+  return interest.create({
+    Email: email,
+  })
+}
 
 export const createEmail = (email: string, secret: string) =>
   emails.create({
@@ -71,5 +78,3 @@ export interface ApplicationRecord {
 
 export const createApplication = (data: ApplicationFields) =>
   applications.create(data)
-
-export {}
