@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <div>
 
         <div className='h-screen flex items-center justify-center text-xl font-medium'>
-          Mile High Hacks: coming to Denver, CO this fall
+          Mile High Hacks: Coming to Denver, CO this fall. Check back soon!
         </div>
 
         {/* <div id="sponsors">
