@@ -14,11 +14,9 @@ import { ApplicationFields, getEmail, updateEmailBySecret } from 'lib/data'
 import Icon from '@hackclub/icons'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import FormField from 'components/Forms/FormField'
-import { censorEmail } from 'lib/util'
 import Input from 'components/Forms/Input'
 import { useRouter } from 'next/router'
 import Meta from 'components/Meta'
-import SectionHeading from 'components/SectionHeading'
 
 type ApplicationFormData = ApplicationFields & {}
 
