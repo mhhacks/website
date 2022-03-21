@@ -10,7 +10,7 @@ import Link from 'next/link'
 const bgImg = (
   <div
     className={clsx(
-      'brightness-50 saturate-[1.5] absolute w-full h-full',
+      'brightness-50 saturate-[1.6] absolute w-full h-full',
       glitchStyles.img
     )}
   />
@@ -42,20 +42,26 @@ const Landing: React.FC = ({ children }) => {
           workshops & prizes in <span className="location">Denver, CO</span>.
         </p>
 
-        <div className="rounded-md px-3 py-1 border-2 border-white font-bold leading-none backdrop-blur-sm">
-          <div className="text-[1.7rem]">November</div>
-          <div className="text-[3.1rem]">19-20</div>
+        <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600">
+          <div className="text-[3.6rem]">Fall</div>
+          <div className="text-[2.6rem] my-2">2022</div>
         </div>
 
         <Link href="/preregister">
           <a>
-            <Button dark className="text-3xl font-heading">Register Now</Button>
+            <Button dark className="text-3xl font-heading">
+              Register Now
+            </Button>
           </a>
         </Link>
 
         <style jsx>{`
           .mhh-header {
             text-shadow: -4px 4px 0px rgba(255, 255, 255, 0.6);
+          }
+
+          .mhh-date {
+            box-shadow: -4px 4px 0px rgba(255, 255, 255, 0.6);
           }
 
           .location {

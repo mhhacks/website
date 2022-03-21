@@ -43,7 +43,7 @@ const InfoGrid: React.FC = ({ children }) => {
           icon={<HIcon glyph="emoji" size={48} className="text-purple-400" />}
           title="Fun & games"
         >
-          {`Mile High Hacks is about more than just coding - make new friends, eat
+          {`Mile High Hacks is about more than just coding. Make new friends, eat
           ice cream at midnight, attend the 2am dance party, go on a scavenger
           hunt, and more!`}
         </Card>
@@ -54,7 +54,7 @@ const InfoGrid: React.FC = ({ children }) => {
         >
           {`Every participant will receive a free month of repl.it's hacker
           plan, a t-shirt, stickers, and more. Winners will walk away with
-          additional prizes, including DigitalOcean credits...`}
+          additional prizes (TBA).`}
         </Card>
 
         <Card

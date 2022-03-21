@@ -1,6 +1,6 @@
-import clsx from "clsx"
-import { selectRandom } from "lib/util"
-import { useEffect, useState, memo } from "react"
+import clsx from 'clsx'
+import { selectRandom } from 'lib/util'
+import { useEffect, useState, memo } from 'react'
 
 const colors = [
   'bg-green-300',
@@ -14,7 +14,11 @@ const colors = [
   'bg-purple-300',
 ]
 
-const Dots: React.FC<{ numDots?: number, maxSize?: number, animate?: boolean }> = ({ numDots = 10, maxSize = 100, animate = true }) => {
+const Dots: React.FC<{
+  numDots?: number
+  maxSize?: number
+  animate?: boolean
+}> = ({ numDots = 10, maxSize = 100, animate = true }) => {
   // const [dots, _setDots] = useState(new Array(numDots).fill(null).map(() => ({
   //   top: Math.random() * 100,
   //   left: Math.random() * 100,
@@ -29,23 +33,27 @@ const Dots: React.FC<{ numDots?: number, maxSize?: number, animate?: boolean }> 
     color: selectRandom(colors),
   }))
 
-  return <div>
-    {dots.map((d, i) => <div
-        key={i}
-        style={{
-          top: `${Math.random() * 100}%`,
-          left: `${Math.random() * 100}%`,
-          width: `${d.size}px`,
-          height: `${d.size}px`,
-          animationDelay: `${Math.random() * 5}s`,
-        }}
-        className={clsx(
-          'absolute rounded-full -z-10',
-          animate && 'animate-pulsate',
-          selectRandom(colors)
-        )}
-      />)}
-  </div>
+  return (
+    <div>
+      {dots.map((d, i) => (
+        <div
+          key={i}
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${d.size}px`,
+            height: `${d.size}px`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+          className={clsx(
+            'absolute rounded-full -z-10',
+            animate && 'animate-pulsate',
+            selectRandom(colors)
+          )}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default memo(Dots)
