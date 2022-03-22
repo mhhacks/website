@@ -42,7 +42,7 @@ const Landing: React.FC = ({ children }) => {
           workshops & prizes in <span className="location">Denver, CO</span>.
         </p>
 
-        <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600">
+        <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600 bg-opacity-50">
           <div className="text-[3.6rem]">Fall</div>
           <div className="text-[2.6rem] my-2">2022</div>
         </div>
@@ -50,7 +50,7 @@ const Landing: React.FC = ({ children }) => {
         <Link href="/preregister">
           <a>
             <Button dark className="text-3xl font-heading">
-              Register Now
+              Preregister
             </Button>
           </a>
         </Link>

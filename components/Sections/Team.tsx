@@ -2,6 +2,8 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Benjamin from 'photos/team/benjamin2.png'
 import Kunal from 'photos/team/kunal.jpeg'
+import Sam from 'photos/team/sam.png'
+import James from 'photos/team/james.jpeg'
 
 const Person = ({ name, role, pronouns, image, link }: any) => {
   return (
@@ -39,7 +41,7 @@ const Person = ({ name, role, pronouns, image, link }: any) => {
 }
 
 const Grid: React.FC = ({ children }) => (
-  <div className="grid gap-4 grid-cols-2 md:grid-cols-4 grid-flow-row">
+  <div className="grid gap-8 grid-cols-2 md:grid-cols-4 grid-flow-row">
     {children}
   </div>
 )
@@ -56,19 +58,19 @@ const Team: React.FC = () => {
         />
         <Person
           name="Sam Sterritt"
-          role="Outreach & Marketing"
+          role="Marketing & Outreach"
           pronouns="she/her"
-          image={Benjamin}
+          image={Sam}
         />
         <Person
           name="JP Keranne"
-          role="Outreach & Coordination"
+          role="Outreach & Logistics"
           pronouns="he/him"
-          image={Benjamin}
+          image={James}
         />
         <Person
           name="Kunal Botla"
-          role="Sponsorships & Logistics"
+          role="Partnerships"
           pronouns="he/him"
           image={Kunal}
         />
