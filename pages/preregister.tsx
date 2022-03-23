@@ -48,7 +48,7 @@ const Register: NextPage = ({}) => {
       <AnalyticsScript />
 
       <div className="absolute flex w-full h-full justify-center items-center">
-        <form className="p-6 bg-co-yellow rounded-md flex flex-col gap-8 items-center w-96">
+        <form className="p-6 bg-primary rounded-md flex flex-col gap-8 items-center w-96">
           {!submitted && (
             <>
               {/* <h1 className='text-3xl font-medium leading-none'>Mile High Hacks</h1> */}

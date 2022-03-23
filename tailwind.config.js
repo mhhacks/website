@@ -10,6 +10,12 @@ module.exports = {
         text: {
           DEFAULT: '#000',
         },
+        primary: {
+          DEFAULT: '#F6D047',
+        },
+        secondary: {
+          DEFAULT: '#102E82',
+        },
         co: {
           red: '#BF2C34',
           blue: '#102E82',

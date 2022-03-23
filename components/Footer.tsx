@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-co-yellow text-sm">
+      <div className="bg-primary text-sm">
         <div className="p-14 flex flex-col sm:flex-row items-center max-w-3xl mx-auto gap-6 justify-center">
           <div className="flex flex-row sm:flex-col gap-3">
             <SocialButton

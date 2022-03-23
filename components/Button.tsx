@@ -11,7 +11,7 @@ const Button: React.FC<{
     <button
       type={type as any}
       className={clsx(
-        'w-full border-2 rounded-md p-3 font-semibold text-xl hover:scale-[103%] focus:scale-[103%] focus:ring-2 ring-offset-2 ring-offset-co-yellow ring-black transition-all outline-none',
+        'w-full border-2 rounded-md p-3 font-semibold text-xl hover:scale-[103%] focus:scale-[103%] focus:ring-2 ring-offset-2 ring-offset-primary ring-black transition-all outline-none',
         dark ? 'bg-black bg-opacity-50 border-white' : 'border-black',
         className
       )}

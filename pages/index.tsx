@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           </div> */}
 
           <div className="pt-24" id="faq">
-            <div className="p-12 bg-co-blue rounded-md text-white">
+            <div className="p-12 bg-secondary rounded-md text-white">
               <SectionHeading className="!p-0 !m-0 leading-none !text-white">
                 FAQ?!?
               </SectionHeading>
