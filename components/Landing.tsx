@@ -6,6 +6,7 @@ import glitchStyles from '../styles/glitch.module.css'
 import clsx from 'clsx'
 import Button from './Button'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const bgImg = (
   <div
@@ -16,10 +17,52 @@ const bgImg = (
   />
 )
 
+const MouseEffect = () => {
+  const [trigger, setTrigger] = useState(false)
+  const [pos, setPos] = useState([-100, -100])
+
+  useEffect(() => {
+    const move = (e: MouseEvent) => {
+      setPos([
+        e.pageX,
+        e.pageY > window.innerHeight ? window.innerHeight : e.pageY,
+      ])
+    }
+
+    const over = (e: any) => {
+      console.log(e.target.classList)
+      if (['button', 'a'].includes(e.target.tagName.toLowerCase()) || e.target.classList.contains('trigger-mouse')) setTrigger(true)
+      else setTrigger(false)
+    }
+
+    window.addEventListener('mousemove', move)
+    window.addEventListener('mouseover', over)
+    return () => {
+      window.removeEventListener('mousemove', move)
+      window.removeEventListener('mouseover', over)
+    }
+  })
+
+  const size = trigger ? 25 : 100
+
+  return (
+    <div
+      style={{ left: pos[0], top: pos[1] }}
+      className="absolute animate-spin-slow origin-center"
+    >
+      <div
+        style={{ width: size, height: size }}
+        className={clsx("transition-all pointer-events-none absolute rounded-full border border-dashed border-white -translate-x-1/2 -translate-y-1/2",
+        trigger && 'bg-primary')}
+      />
+    </div>
+  )
+}
+
 const Landing: React.FC = ({ children }) => {
   return (
     <div className={clsx('h-screen', glitchStyles.glitchContainer)}>
-      <div className="absolute w-full h-full z-[-1]">
+      <div className="absolute w-full h-full -z-20">
         {bgImg}
         {bgImg}
         {bgImg}
@@ -27,24 +70,29 @@ const Landing: React.FC = ({ children }) => {
         {bgImg}
       </div>
 
-      <div className="flex flex-col h-full items-center justify-center text-center gap-8 text-white">
+      <MouseEffect />
+
+      <div className="flex flex-col h-full items-center justify-center text-center gap-24 text-white">
         <h1
           className={clsx(
-            'text-7xl font-bold mhh-header py-2',
-            glitchStyles.text
+            'text-7xl font-brand font-bold text-transparent bg-clip-text bg-white'
+            // glitchStyles.text
           )}
         >
           Mile High Hacks
         </h1>
 
-        <p className="max-w-md text-2xl font-medium">
-          High schoolers: learn to code with 24 hours of fun, free food,
-          workshops & prizes in <span className="location">Denver, CO</span>.
-        </p>
-
-        <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600 bg-opacity-50">
-          <div className="text-[3.6rem]">Fall</div>
-          <div className="text-[2.6rem] my-2">2022</div>
+        <div className="flex items-center gap-8">
+          <p className="max-w-md text-[1.6rem] font-medium text-left">
+            High schoolers: learn to code with 24 hours of fun, free food,
+            workshops & prizes in <span className="location">Denver, CO</span>.
+          </p>
+          <div className="h-full border-l-2" />
+          {/* <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600 bg-opacity-50"> */}
+          <div className="font-bold leading-none">
+            <div className="text-[3.6rem] pb-2 border-b">Fall</div>
+            <div className="text-[2.6rem] my-2">2022</div>
+          </div>
         </div>
 
         <Link href="/preregister">

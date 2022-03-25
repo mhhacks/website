@@ -12,6 +12,7 @@ module.exports = {
         },
         primary: {
           DEFAULT: '#F6D047',
+          variant: '#f5d976',
         },
         secondary: {
           DEFAULT: '#102E82',
@@ -25,9 +26,13 @@ module.exports = {
       fontFamily: {
         primary: ['Barlow', 'sans-serif'],
         heading: ['Changa', 'sans-serif'],
+        'brand': ['"Bungee Outline"', 'sans-serif'],
       },
       animation: {
+        'spin-slow': 'spin 20s linear infinite',
         pulsate: 'pulsate 5s ease-in-out infinite both',
+        pop: 'pop 200ms ease-out',
+        'moving-bg': 'movingBackground 20s ease infinite',
       },
       keyframes: {
         pulsate: {
@@ -37,7 +42,21 @@ module.exports = {
           '50%': {
             transform: 'scale(0.8)',
           },
-        }
+        },
+        pop: {
+          'from, to': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(1.05)',
+            filter: 'blur(2px)',
+          },
+        },
+        movingBackground: {
+          '0%': {backgroundPosition: '0% 0%'},
+          '50%':{backgroundPosition: '100% 100%'},
+          '100%':{backgroundPosition: '0% 0%'}
+        },
       },
       backgroundSize: {
         'oversize': '200% 200%'

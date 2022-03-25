@@ -3,6 +3,9 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 const googleFontFamilies: string[] = [
   'Barlow:wght@300;400;500;600;700',
   'Changa:wght@400;600;700',
+  // 'Bungee+Shade',
+  // 'Bungee+Inline',
+  'Bungee+Outline',
 ]
 
 class MyDocument extends Document {

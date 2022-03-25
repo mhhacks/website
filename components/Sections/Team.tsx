@@ -8,16 +8,20 @@ import James from 'photos/team/james.jpeg'
 const Person = ({ name, role, pronouns, image, link }: any) => {
   return (
     <div className="flex flex-col gap-1">
-      <Image
-        src={image}
-        alt={name}
-        width={240}
-        height={240}
-        className="rounded-sm"
-        objectFit="cover"
-        objectPosition={'center'}
-        placeholder="blur"
-      />
+      {/* <div className='inline rounded-md overflow-hidden'> */}
+      <div className="hover:animate-pop">
+        <Image
+          src={image}
+          alt={name}
+          width={240}
+          height={240}
+          className="rounded-md hover:sepia hover:contrast-125 transition-all duration-200"
+          objectFit="cover"
+          objectPosition={'center'}
+          placeholder="blur"
+        />
+      </div>
+      {/* </div> */}
       <div className="flex flex-col">
         <a href={link} target={'_blank'} rel="noreferrer">
           <h4
