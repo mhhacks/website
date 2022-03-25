@@ -6,14 +6,14 @@ const SocialButton = ({ glyph, href }: any) => (
     <Icon
       glyph={glyph}
       size={36}
-      className="hover:text-primary transition-all"
+      className="hover:text-co-red transition-all"
     />
   </a>
 )
 
 const FooterLink = ({ href, children }: any) => (
   <Link href={href}>
-    <a className="underline font-medium transition-all">{children}</a>
+    <a className="underline hover:text-co-red font-medium transition-all">{children}</a>
   </Link>
 )
 
