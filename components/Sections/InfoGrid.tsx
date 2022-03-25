@@ -20,7 +20,7 @@ const Card: React.FC<{ icon: React.ReactNode; title: string }> = ({
 const InfoGrid: React.FC = ({ children }) => {
   return (
     <div className="my-14">
-      <div className="grid grid-cols-2 gap-4 auto-rows-fr">
+      <div className="grid sm:grid-cols-2 gap-4 auto-rows-fr">
         <Card
           icon={<HIcon glyph="explore" size={48} className="text-blue-400" />}
           title="Workshops and mentors"

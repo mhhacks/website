@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             <SocialButton href="mailto:team@milehighhacks.com" glyph="email" />
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center sm:items-start gap-2">
             <div>
               <a
                 target={'_blank'}

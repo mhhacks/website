@@ -72,10 +72,10 @@ const Landing: React.FC = ({ children }) => {
 
       <MouseEffect />
 
-      <div className="flex flex-col h-full items-center justify-center text-center gap-24 text-white">
+      <div className="px-2 flex flex-col h-full items-center justify-center text-center gap-12 sm:gap-24 text-white">
         <h1
           className={clsx(
-            'text-7xl font-brand font-bold text-transparent bg-clip-text bg-white'
+            'text-4xl md:text-7xl font-brand font-bold text-transparent bg-clip-text bg-white'
             // glitchStyles.text
           )}
         >
@@ -83,15 +83,15 @@ const Landing: React.FC = ({ children }) => {
         </h1>
 
         <div className="flex items-center gap-8">
-          <p className="max-w-md text-[1.6rem] font-medium text-left">
+          <p className="max-w-md text-xl sm:text-[1.6rem] font-medium text-left">
             High schoolers: learn to code with 24 hours of fun, free food,
             workshops & prizes in <span className="location">Denver, CO</span>.
           </p>
           <div className="h-full border-l-2" />
           {/* <div className="mhh-date rounded-md px-3 py-1 border-2 border-white font-bold leading-none bg-gray-600 bg-opacity-50"> */}
-          <div className="font-bold leading-none">
-            <div className="text-[3.6rem] pb-2 border-b">Fall</div>
-            <div className="text-[2.6rem] my-2">2022</div>
+          <div className="font-bold !leading-none text-sm sm:text-base">
+            <div className="text-[3.6em] pb-2 border-b">Fall</div>
+            <div className="text-[2.6em] my-2">2022</div>
           </div>
         </div>
 

@@ -57,7 +57,6 @@ const Navbar: React.FC<{}> = ({}) => {
         isAtTop && menuOpen && 'bg-white sm:bg-transparent'
       )}
     >
-      {/* <div className='p-1 text-center bg-accent-red font-bold'>MAHacks has been postponed from March 19 to April 10. Please check your email for more details.</div> */}
 
       <div
         className={clsx(
@@ -77,6 +76,7 @@ const Navbar: React.FC<{}> = ({}) => {
           <button className="sm:hidden" onTouchEnd={(e) => e.stopPropagation()}>
             <Icon
               glyph="menu"
+              className={clsx(isAtTop && !menuOpen && 'text-white')}
               size={24}
               onClick={() => setMenuOpen((o) => !o)}
             />
@@ -93,13 +93,11 @@ const Navbar: React.FC<{}> = ({}) => {
                     isMobile && {
                       x: -40,
                       opacity: 0,
-                      rotate: -10,
                     }
                   }
                   animate={{
                     x: 0,
                     opacity: 1,
-                    rotate: 0,
                   }}
                   exit={{
                     y: 30,
@@ -109,8 +107,8 @@ const Navbar: React.FC<{}> = ({}) => {
                   <Link href={href}>
                     <a
                       className={clsx(
-                        'font-semibold hover:drop-shadow-xl transition-all',
-                        isAtTop && router.pathname === '/' && 'text-white'
+                        'font-semibold',
+                        isAtTop && router.pathname === '/' && !isMobile && 'text-white'
                       )}
                     >
                       {name}
