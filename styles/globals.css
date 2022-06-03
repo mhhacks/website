@@ -7,8 +7,8 @@
     @apply font-primary text-text;
   }
 
-  /* body {
-    @apply bg-bg;
+  body {
+    /* @apply bg-bg; */
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -30,16 +30,28 @@
   }
 
   .mdx p {
-    @apply my-3;
+    @apply my-3 leading-relaxed;
   }
 
   .mdx a {
-    @apply hover:underline decoration-dotted text-primary;
+    @apply underline hover:decoration-dashed;
+  }
+
+  .mdx details {
+    @apply m-2;
+  }
+
+  .mdx summary {
+    @apply text-lg font-semibold cursor-pointer;
   }
 
   .mdx ul {
     @apply list-disc ml-7;
-  } */
+  }
+
+  p strong {
+    @apply font-semibold;
+  }
 }
 
 @layer utilities {

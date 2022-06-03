@@ -1,8 +1,6 @@
 import Image from 'next/image'
 
-const primarySponsors: any[] = [
-  
-]
+const primarySponsors: any[] = []
 
 const Grid: React.FC<{
   sponsors: Array<{

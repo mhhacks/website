@@ -1,7 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 const googleFontFamilies: string[] = [
-  'Josefin+Sans:wght@400;500'
+  'Barlow:wght@300;400;500;600;700',
+  'Changa:wght@400;600;700',
+  // 'Bungee+Shade',
+  // 'Bungee+Inline',
+  'Bungee+Outline',
 ]
 
 class MyDocument extends Document {
@@ -26,6 +30,7 @@ class MyDocument extends Document {
               .join('')}display=swap`}
             rel="stylesheet"
           />
+          <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&f[]=clash-display@1&f[]=excon@1&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

@@ -5,14 +5,14 @@ const Button: React.FC<{
   type?: 'submit'
   onClick?: MouseEventHandler<HTMLButtonElement>
   className?: string
-  glow?: boolean
-}> = ({ children, type = 'button', onClick, className, glow }) => {
+  dark?: boolean
+}> = ({ children, type = 'button', onClick, className, dark }) => {
   return (
     <button
       type={type as any}
       className={clsx(
-        'bg-primary-400 hover:bg-primary-500 focus:bg-primary-500 text-lg font-semibold py-3 px-5 rounded-md focus:ring-4 ring-primary-800',
-        glow && 'shadow-glow shadow-primary',
+        'w-full border-2 rounded-md p-3 font-semibold text-xl hover:scale-[103%] focus:scale-[103%] focus:ring-2 ring-offset-2 ring-offset-primary ring-black transition-all outline-none',
+        dark ? 'bg-black bg-opacity-50 border-white' : 'border-black',
         className
       )}
       onClick={onClick}

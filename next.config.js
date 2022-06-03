@@ -11,11 +11,16 @@ module.exports = withMDX({
   reactStrictMode: true,
   async redirects() {
     return [
-      // {
-      //   source: '/prospectus',
-      //   destination: '/MAHacks_VI_Sponsorship_Prospectus_20220122.pdf',
-      //   permanent: false,
-      // }
+      {
+        source: '/register',
+        destination: '/preregister',
+        permanent: false,
+      },
+      {
+        source: '/prospectus',
+        destination: '/MHHacks_v0_Sponsorship_Prospectus_20220322.pdf',
+        permanent: false
+      }
     ]
   },
 })

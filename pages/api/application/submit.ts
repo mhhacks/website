@@ -4,7 +4,6 @@ import Mailgun from 'mailgun.js'
 import formData from 'form-data'
 import { ApplicationFields, createApplication, getEmail } from 'lib/data'
 import dedent from 'dedent'
-import axios from 'axios'
 
 const domain = process.env.MAILGUN_DOMAIN!
 const mg = new Mailgun(formData).client({

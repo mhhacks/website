@@ -4,16 +4,18 @@ import { useLayoutEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Icon from '@hackclub/icons'
 import Logo from './Logo'
+import { useRouter } from 'next/router'
 
 const navItems = {
-  'HOW IT WORKS': '/#how-it-works',
-  REGISTER: '/register',
+  'How It Works': '/#how-it-works',
+  Sponsors: '/#sponsors',
+  Team: '/#team',
   FAQ: '/#faq',
-  SPONSORS: '/#sponsors',
-  PREVIOUS: '/#previous',
+  Register: '/preregister',
 }
 
 const Navbar: React.FC<{}> = ({}) => {
+  const router = useRouter()
   const [isAtTop, setAtTop] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -50,17 +52,16 @@ const Navbar: React.FC<{}> = ({}) => {
   return (
     <div
       className={clsx(
-        'fixed top-0 w-full z-40 transition-all bg-opacity-90 border-gray-800',
-        !isAtTop && 'border-b bg-bg',
-        isAtTop && menuOpen && 'bg-bg sm:bg-transparent'
+        'fixed top-0 w-full z-40 transition-all border-slate-300',
+        !isAtTop && 'border-b bg-white',
+        isAtTop && menuOpen && 'bg-white sm:bg-transparent'
       )}
     >
-      {/* <div className='p-1 text-center bg-accent-red font-bold'>MAHacks has been postponed from March 19 to April 10. Please check your email for more details.</div> */}
 
       <div
         className={clsx(
           'flex flex-col sm:flex-row sm:items-center gap-3 md:gap-7 max-w-6xl mx-auto px-8 transition-all',
-          isAtTop ? 'py-6' : 'py-3'
+          isAtTop ? 'py-4' : 'py-2'
         )}
       >
         <div className="flex items-center">
@@ -75,6 +76,7 @@ const Navbar: React.FC<{}> = ({}) => {
           <button className="sm:hidden" onTouchEnd={(e) => e.stopPropagation()}>
             <Icon
               glyph="menu"
+              className={clsx(isAtTop && !menuOpen && 'text-white')}
               size={24}
               onClick={() => setMenuOpen((o) => !o)}
             />
@@ -91,13 +93,11 @@ const Navbar: React.FC<{}> = ({}) => {
                     isMobile && {
                       x: -40,
                       opacity: 0,
-                      rotate: -10,
                     }
                   }
                   animate={{
                     x: 0,
                     opacity: 1,
-                    rotate: 0,
                   }}
                   exit={{
                     y: 30,
@@ -105,7 +105,12 @@ const Navbar: React.FC<{}> = ({}) => {
                   }}
                 >
                   <Link href={href}>
-                    <a className="font-bold hover:drop-shadow-xl transition-all">
+                    <a
+                      className={clsx(
+                        'font-semibold',
+                        isAtTop && router.pathname === '/' && !isMobile && 'text-white'
+                      )}
+                    >
                       {name}
                     </a>
                   </Link>
