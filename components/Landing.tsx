@@ -1,7 +1,3 @@
-import Image from 'next/image'
-// import DenverPhoto from '../photos/landing.jpeg'
-import AnalyticsScript from './AnalyticsScript'
-import Navbar from './Navbar'
 import glitchStyles from '../styles/glitch.module.css'
 import clsx from 'clsx'
 import Button from './Button'

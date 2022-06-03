@@ -30,6 +30,7 @@ class MyDocument extends Document {
               .join('')}display=swap`}
             rel="stylesheet"
           />
+          <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&f[]=clash-display@1&f[]=excon@1&display=swap" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

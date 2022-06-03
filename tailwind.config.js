@@ -25,7 +25,7 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Barlow', 'sans-serif'],
-        heading: ['Changa', 'sans-serif'],
+        heading: ['Barlow', 'sans-serif'], // Changa
         'brand': ['"Bungee Outline"', 'sans-serif'],
       },
       animation: {
