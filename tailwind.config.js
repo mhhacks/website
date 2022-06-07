@@ -17,8 +17,8 @@ module.exports = {
           DEFAULT: '#000',
         },
         primary: {
-          DEFAULT: '#F6D047',
-          variant: '#f5d976',
+          DEFAULT: '#03C5B2', // F6D047
+          accent: '#102E82'
         },
         secondary: {
           DEFAULT: '#102E82',

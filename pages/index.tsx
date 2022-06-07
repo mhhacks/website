@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <div>
       <AnalyticsScript />
       <Meta />
-      {/* <Navbar /> */}
+      <Navbar />
       <Landing />
 
       <div className="mx-auto max-w-3xl px-4">

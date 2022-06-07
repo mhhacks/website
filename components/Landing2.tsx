@@ -12,14 +12,15 @@ const Landing: React.FC = ({ children }) => {
     >
       <div className="flex flex-col items-center p-4">
         <div className="flex flex-col justify-center mx-auto gap-8 py-24">
+          <div>
           <div className="font-extrabold text-lg">
-            November 19-20 • Denver, CO
+            Fall 2022 • Denver, CO
           </div>
-          <div className="mhh-heading font-brand text-7xl">
+          <div className="mhh-heading font-brand text-6xl md:text-[5rem] leading-tight">
             Mile High Hacks
-          </div>
+          </div></div>
           {/* TODO fix text scaling here */}
-          <div className="font-secondary text-2xl max-w-xl">
+          <div className="font-secondary text-2xl max-w-[40rem]">
             High schoolers: learn to code with 24 hours of fun, free food,
             workshops & prizes in Denver, CO.
           </div>
