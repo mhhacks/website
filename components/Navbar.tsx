@@ -57,7 +57,6 @@ const Navbar: React.FC<{}> = ({}) => {
         isAtTop && menuOpen && 'bg-white sm:bg-transparent'
       )}
     >
-
       <div
         className={clsx(
           'flex flex-col sm:flex-row sm:items-center gap-3 md:gap-7 max-w-6xl mx-auto px-8 transition-all',
@@ -108,7 +107,10 @@ const Navbar: React.FC<{}> = ({}) => {
                     <a
                       className={clsx(
                         'font-semibold',
-                        isAtTop && router.pathname === '/' && !isMobile && 'text-white'
+                        isAtTop &&
+                          router.pathname === '/' &&
+                          !isMobile &&
+                          'text-white'
                       )}
                     >
                       {name}

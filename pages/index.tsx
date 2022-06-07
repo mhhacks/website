@@ -5,7 +5,7 @@ import Details from 'components/Sections/Details.mdx'
 import Team from 'components/Sections/Team'
 import Meta from 'components/Meta'
 import InfoGrid from 'components/Sections/InfoGrid'
-import Landing from 'components/Landing'
+import Landing from 'components/Landing2'
 import Navbar from 'components/Navbar'
 import AnalyticsScript from 'components/AnalyticsScript'
 import Footer from 'components/Footer'
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <div>
       <AnalyticsScript />
       <Meta />
-      <Navbar />
+      {/* <Navbar /> */}
       <Landing />
 
       <div className="mx-auto max-w-3xl px-4">

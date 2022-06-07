@@ -13,7 +13,9 @@ const SocialButton = ({ glyph, href }: any) => (
 
 const FooterLink = ({ href, children }: any) => (
   <Link href={href}>
-    <a className="underline hover:text-co-red font-medium transition-all">{children}</a>
+    <a className="underline hover:text-co-red font-medium transition-all">
+      {children}
+    </a>
   </Link>
 )
 

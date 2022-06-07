@@ -6,6 +6,12 @@ module.exports = {
     extend: {
       colors: {
         bg: {
+          page: '#dce4e8',
+          card: '#edf1f2'
+        },
+        landing: { // Landing bg gradient
+          g1: '#A4C3D5',
+          g2: '#D1DCE2',
         },
         text: {
           DEFAULT: '#000',
@@ -25,8 +31,9 @@ module.exports = {
       },
       fontFamily: {
         primary: ['Barlow', 'sans-serif'],
+        secondary: ['VT323', 'monospace'],
         heading: ['Barlow', 'sans-serif'], // Changa
-        'brand': ['"Bungee Outline"', 'sans-serif'],
+        'brand': ['"Suez One"', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite',

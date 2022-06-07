@@ -27,7 +27,11 @@ const MouseEffect = () => {
 
     const over = (e: any) => {
       console.log(e.target.classList)
-      if (['button', 'a'].includes(e.target.tagName.toLowerCase()) || e.target.classList.contains('trigger-mouse')) setTrigger(true)
+      if (
+        ['button', 'a'].includes(e.target.tagName.toLowerCase()) ||
+        e.target.classList.contains('trigger-mouse')
+      )
+        setTrigger(true)
       else setTrigger(false)
     }
 
@@ -48,8 +52,10 @@ const MouseEffect = () => {
     >
       <div
         style={{ width: size, height: size }}
-        className={clsx("transition-all pointer-events-none absolute rounded-full border border-dashed border-white -translate-x-1/2 -translate-y-1/2",
-        trigger && 'bg-primary')}
+        className={clsx(
+          'transition-all pointer-events-none absolute rounded-full border border-dashed border-white -translate-x-1/2 -translate-y-1/2',
+          trigger && 'bg-primary'
+        )}
       />
     </div>
   )
