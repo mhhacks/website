@@ -53,21 +53,21 @@ const Navbar: React.FC<{}> = ({}) => {
     <div
       className={clsx(
         'fixed top-0 w-full z-40 transition-all border-slate-300',
-        !isAtTop && 'border-b bg-white',
-        isAtTop && menuOpen && 'bg-white sm:bg-transparent'
+        !isAtTop && 'border-b bg-bg-card',
+        isAtTop && menuOpen && 'bg-bg-card sm:bg-transparent'
       )}
     >
-
       <div
         className={clsx(
           'flex flex-col sm:flex-row sm:items-center gap-3 md:gap-7 max-w-6xl mx-auto px-8 transition-all',
-          isAtTop ? 'py-4' : 'py-2'
+          isAtTop ? 'py-7' : 'py-5'
         )}
       >
         <div className="flex items-center">
           <Link href={'/#'} scroll={true}>
-            <a>
-              <Logo />
+            <a className='text-xl font-black tracking-wider'>
+              {/* <Logo /> */}
+              MHH.
             </a>
           </Link>
 
@@ -76,7 +76,7 @@ const Navbar: React.FC<{}> = ({}) => {
           <button className="sm:hidden" onTouchEnd={(e) => e.stopPropagation()}>
             <Icon
               glyph="menu"
-              className={clsx(isAtTop && !menuOpen && 'text-white')}
+              // className={clsx(isAtTop && !menuOpen && 'text-white')}
               size={24}
               onClick={() => setMenuOpen((o) => !o)}
             />
@@ -86,7 +86,7 @@ const Navbar: React.FC<{}> = ({}) => {
           {menuOpen && (
             <>
               <div className="flex-1" />
-              {Object.entries(navItems).map(([name, href]) => (
+              {Object.entries(navItems).map(([name, href], i) => (
                 <motion.div
                   key={name}
                   initial={
@@ -107,8 +107,8 @@ const Navbar: React.FC<{}> = ({}) => {
                   <Link href={href}>
                     <a
                       className={clsx(
-                        'font-semibold',
-                        isAtTop && router.pathname === '/' && !isMobile && 'text-white'
+                        'font-medium transition-all',
+                        i === Object.entries(navItems).length - 1 && 'border-2 border-black p-2 rounded-md hover:bg-black hover:bg-opacity-10'
                       )}
                     >
                       {name}

@@ -6,14 +6,16 @@ const SocialButton = ({ glyph, href }: any) => (
     <Icon
       glyph={glyph}
       size={36}
-      className="hover:text-co-red transition-all"
+      className="hover:text-primary-accent transition-all"
     />
   </a>
 )
 
 const FooterLink = ({ href, children }: any) => (
   <Link href={href}>
-    <a className="underline hover:text-co-red font-medium transition-all">{children}</a>
+    <a className="underline hover:text-primary-accent font-medium transition-all">
+      {children}
+    </a>
   </Link>
 )
 
@@ -63,7 +65,7 @@ const Footer: React.FC = () => {
             }
 
             .divider .shape-fill {
-              fill: #f6d047;
+              fill: #03C5B2;
             }
           `}</style>
         </div>

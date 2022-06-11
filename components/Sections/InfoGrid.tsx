@@ -7,7 +7,7 @@ const Card: React.FC<{ icon: React.ReactNode; title: string }> = ({
   title,
 }) => {
   return (
-    <div className="p-4 shadow-lg rounded-md hover:shadow-xl transition-all group">
+    <div className="bg-bg-card p-4 shadow-lg rounded-md hover:shadow-2xl transition-all group">
       <div className="group-hover:-translate-y-1 group-hover:rotate-3 duration-200 transition-transform">
         {icon}
       </div>
